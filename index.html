@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 
-<html>
 <head>
     <meta charset="UTF-8">
 
@@ -104,7 +103,6 @@
         #divCanvas{
             position: absolute;
             overflow: hidden;
-            overscroll-behavior: none;
         }
         #divCanvas > *{
             position: absolute;
@@ -146,36 +144,6 @@
             display: block;
             width: 40px;
             height: 40px;
-        }
-
-        /* DEVAREA */
-        #divGame > #devArea {
-            position: fixed;
-            display: flex;
-            align-items: flex-end;
-            left: 0;
-            bottom: 0;
-        }
-        #devArea button {
-            display: block;
-            margin: 2px;
-
-            font: 16px sans-serif;
-            color: black;
-
-            background-color:lightgrey;
-            border: 1px solid grey;
-            border-radius: 5px;
-
-            cursor: pointer;
-        }
-        #devArea code {
-            display: block;
-            font-family: sans-serif;
-        }
-        #oPaused {
-            color: #ffff00;
-            font-weight: bold;
         }
 
         /* GENERAL */
@@ -238,23 +206,6 @@
                     </div>
                 </button>
             </div>
-
-            <div id="devArea" class="not-selectable">
-                <div>
-                    <button id="pause">pause</button>
-                    <button id="callsPerSecond">calls per second</button>
-                    <button id="debugMessages" style="background-color: #404040;">debug messages</button>
-                    <button id="debugClick" style="background-color: #404040;">debug click</button>
-                    <button id="resizeCanvas" style="background-color: #008000;">resize divCanvas</button>
-                </div>
-                <div>
-                    <code id="oPaused" class="hide">paused</code>
-                    <code id="oMouse"></code>
-                    <code id="oFps"></code>
-                    <code id="oViewportSize"></code>
-                    <code id="oScrollOffset"></code>
-                </div>
-            </div>
         </div>
 
         <div id="divProgressBar" class="not-selectable">
@@ -271,4 +222,3 @@
     <script src="./app.js"></script>
 
 </body>
-</html>
